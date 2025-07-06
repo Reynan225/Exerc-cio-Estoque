@@ -9,8 +9,6 @@ public class Program {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-
-		Product p = new Product(); // sobrecarga padrão, demonstrar como funciona a sobrecarga! Também consequimos ver as versões dos construtores
 		
 		System.out.println("Enter product data:");
 		System.out.print("Name: ");
@@ -20,6 +18,9 @@ public class Program {
 
 		Product product = new Product(name, price);
 
+		product.setName("Computer");
+		System.out.println("\nUpdate name: " + product.getName());
+		
 		System.out.println("\nProduct data: " + product);
 		
 		System.out.print("\nEnter the number of products to be added in stock: ");
