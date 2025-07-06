@@ -10,21 +10,21 @@ public class Program {
 
 		Scanner sc = new Scanner(System.in);
 
+		Product p = new Product(); // sobrecarga padrão, demonstrar como funciona a sobrecarga! Também consequimos ver as versões dos construtores
+		
 		System.out.println("Enter product data:");
 		System.out.print("Name: ");
 		String name = sc.nextLine();
 		System.out.print("Price: ");
 		double price = sc.nextDouble();
-		System.out.print("Quantity in stock: ");
-		int quantity = sc.nextInt();
 
-		Product product = new Product(name, price, quantity);
+		Product product = new Product(name, price);
 
 		System.out.println("\nProduct data: " + product);
 		
 		System.out.print("\nEnter the number of products to be added in stock: ");
-		int addStock = sc.nextInt();
-		product.addProducts(addStock);
+		int quantity = sc.nextInt();
+		product.addProducts(quantity);
 		
 		System.out.println("\nUpdate data: " + product);
 		System.out.print("\nEnter the number of products to be removed from stock: ");
